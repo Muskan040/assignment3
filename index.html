@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Form</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="text-center mt-5 title">Pizza Order Form</h1>
+        <form id="pizzaForm" class="mt-5 pizzaForm">
+            <div class="mb-3">
+                <label for="size" class="form-label">Size:</label>
+                <select id="size" class="form-select" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+    
+            <div class="mb-3">
+                <label for="crust" class="form-label">Crust:</label>
+                <select id="crust" class="form-select" name="crust">
+                    <option value="thin">Thin</option>
+                    <option value="thick">Thick</option>
+                    <option value="stuffed">Stuffed</option>
+                    <option value="sicilian">Sicilian</option>
+                    <option value="Gluten-free">Gluten-free</option>
+                    <option value="Flatbread">Flatbread</option>
+
+                </select>
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label">Toppings:</label><br>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="pepperoni" name="topping" value="Pepperoni">
+                            <label class="form-check-label" for="pepperoni">Pepperoni</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="mushrooms" name="topping" value="Mushrooms">
+                            <label class="form-check-label" for="mushrooms">Mushrooms</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="sausage" name="topping" value="Sausage">
+                            <label class="form-check-label" for="sausage">Sausage</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="Extra cheese" name="topping" value="Extra cheese">
+                            <label class="form-check-label" for="Extra cheese">Extra cheese</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="Black olives" name="topping" value="Black olives">
+                            <label class="form-check-label" for="Black olives">Black olives</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="Tomato" name="topping" value="Tomato">
+                            <label class="form-check-label" for="Tomato">Tomato</label>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="mb-3">
+                <label for="pizzaQty" class="form-label">Quantity:</label>
+                <input type="number" id="pizzaQty" class="form-control" value="1" min="1" max="500">
+            </div>
+    
+            <div class="d-grid gap-2">
+                <button type="button" id="orderButton" class="btn btn-primary">Order</button>
+            </div>
+            <p id="studentInfo"  class="text-center mt-5"></p>
+        </form>
+    </div>
+        
+    
+
+    
+
+    <!-- Placeholder for pizza description -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <div>
+            <h1>Your Order is: </h1>
+        </div>
+        <p id="pizzaDescription"></p>
+        </div>
+    </div>
+  
+    
+
+    <script src="js/script.js" defer></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html>
